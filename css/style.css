@@ -164,8 +164,8 @@ ul {
 		border-top: 2px solid var(--main-bg-color);
 		border-bottom: 2px solid var(--main-bg-color);
 		padding: 10px 20px 10px 0;
-		@media (max-width: 1024px) {
-			min-width: 25%;
+		@media (max-width: 767.98px) {
+			width: 100%;
 		}
 	}
 
@@ -228,6 +228,7 @@ ul {
 
 		@media (max-width: 767.98px) {
 			display: grid;
+			width: 100%;
 			grid-template-columns: repeat(2, 1fr);
 			gap: 10px;
 		}
@@ -334,7 +335,6 @@ ul {
 		border-radius: 20px;
 		padding: 5px;
 		height: 207px;
-		/* width: 268px; */
 		width: 31%;
 	}
 
@@ -346,6 +346,11 @@ ul {
 	}
 
 	.card-content {
+		display: flex;
+		flex-direction: column;
+		justify-content: space-between;
+		box-sizing: border-box;
+
 		margin-left: 6px;
 		position: relative;
 		bottom: 10px;
@@ -387,6 +392,7 @@ ul {
 
 .populaires-cards .card {
 	display: flex;
+	max-height: 136px;
 }
 
 .populaires-cards img {
@@ -575,22 +581,23 @@ footer {
 		position: relative;
 		bottom: auto;
 		text-align: center;
-		padding: 15px;
+		padding-top: 15px;
 		margin-bottom: 5px;
-		border-bottom: 2px solid var(--main-bg-color);
-	}
-
-	.navigation:hover {
-		border-bottom: 2px solid var(--main-color);
 	}
 
 	.navigation a {
 		margin-left: 0;
+		display: block;
+		border-bottom: 2px solid var(--main-bg-color);
+		padding-bottom: 18px;
 	}
 
 	.navigation a:hover {
 		color: var(--main-color);
 		border-top: none;
+
+		border-bottom: 2px solid var(--main-color);
+		
 	}
 
 	/******************************************
