@@ -54,6 +54,10 @@ a {
 	box-shadow: 0px 6px 14px rgba(0, 0, 0, 0.2);
 }
 
+.card-rating {
+	display: flex;
+}
+
 .card img {
 	object-fit: cover;
 }
@@ -240,18 +244,22 @@ ul {
 
 		.filtre-btn {
 			display: flex;
-			align-items: center;
+			align-items: center; /*centrer même ligne i et p*/
+			justify-content: center;
 			border: 2px solid var(--border-color);
 			border-radius: 50px;
-			padding: 0px 15px;
 			background-color: white;
 			font-weight: bold;
+			font-size: 0.80rem;
 			white-space: nowrap;
 			margin-bottom: 10px;
+			gap: 10px;
+			padding: 15px;
 
-			@media (max-width: 370px){
-				/*pour garantir responsivité en dessous de 370px des filtres*/
-				padding: 0px 5px;
+
+			@media (max-width: 400px){
+				/*pour respecter la maquette texte collé à gauche*/
+				justify-content: flex-start;
 			}
 		}
 
@@ -260,13 +268,9 @@ ul {
 		}
 
 		.filtre-btn i {
-			font-size: 1.2rem;
+			font-size: 1.1rem;
 		}
 
-		.filtre-btn p {
-			margin-left: 10px;
-			font-size: 1rem;
-		}
 	}
 }
 
@@ -350,16 +354,24 @@ ul {
 		flex-direction: column;
 		justify-content: space-between;
 		box-sizing: border-box;
+		height: 64px;
+		padding-left: 10px;
+		margin-top: 5px;
 
-		margin-left: 6px;
-		position: relative;
-		bottom: 10px;
+		.card-txt {
+			height: 45px;
+			display: flex;
+			flex-direction: column;
+			justify-content: space-between;
 
-		p {
-			position: relative;
-			bottom: 8px;
-			height: 5px;
-			font-size: 14px;
+			.card-title {
+				margin: 0;
+			}
+
+			.card-subtitle {
+				margin: 0;
+				font-size: 14px;
+			}
 		}
 	}
 
@@ -388,6 +400,21 @@ ul {
 	gap: 30px;
 	width: 100%;
 	margin-top: 33px;
+
+	.card-txt {
+		display: flex;
+		flex-direction: column;
+		justify-content: space-between;
+
+		.card-title {
+			margin: 10px 0;
+		}
+
+		.card-subtitle {
+			margin: 0;
+			font-size: 14px;
+		}
+	}
 }
 
 .populaires-cards .card {
@@ -404,6 +431,7 @@ ul {
 
 .populaires-cards .card-content {
 	width: 67%;
+	height: 130px;
 	padding-left: 15px;
 	display: flex;
 	flex-direction: column;
@@ -624,7 +652,7 @@ footer {
 		}
 
 		.card {
-			width: 100%;
+			width: 98%;
 			margin: 0;
 		}
 	}
